@@ -1,0 +1,34 @@
+public class House {
+  private int rooms;
+  private int floors;
+  private boolean hasGarden;
+  private boolean hasSwimmingPool;
+  // getters, toString()
+}
+
+public interface Builder {
+  Builder setRooms(int rooms);
+  Builder setFloors(int floors);
+  Builder setGarden(boolean hasGarden);
+  Builder setSwimmingPool(boolean hasSwimmingPool);
+  House build();
+}
+
+public class HouseBuilder implements Builder {
+  private House house = new House();
+  public Builder setRooms(int rooms){ house.setRooms(rooms); return this; }
+  …
+  public House build(){ return house; }
+}
+
+public class Director {
+  public House constructLuxuryHouse(){
+    return new HouseBuilder()
+      .setRooms(5)
+      .setFloors(2)
+      .setGarden(true)
+      .setSwimmingPool(true)
+      .build();
+  }
+}
+
