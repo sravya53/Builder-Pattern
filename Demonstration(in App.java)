@@ -1,0 +1,16 @@
+public class App {
+  public static void main(String[] args) {
+    Director director = new Director();
+    House luxury = director.constructLuxuryHouse();
+    System.out.println("Luxury House: " + luxury);
+    
+    // Using builder directly
+    House simple = new HouseBuilder()
+      .setRooms(2)
+      .setFloors(1)
+      .setGarden(false)
+      .setSwimmingPool(false)
+      .build();
+    System.out.println("Simple House: " + simple);
+  }
+}
