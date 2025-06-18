@@ -1,0 +1,7 @@
+src/
+└─ main/java/com/yourname/builderpattern/
+     • Product.java           // final object (e.g., House, Meal, Car)
+     • Builder.java           // interface or abstract class for steps
+     • ConcreteBuilder.java   // implementation (e.g., HouseBuilder)
+     • Director.java          // orchestrates the build steps
+     • App.java               // demonstrates usage
