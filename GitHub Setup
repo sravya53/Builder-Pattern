@@ -1,0 +1,19 @@
+
+Locally create a new Git repo
+
+bash
+Copy
+Edit
+git init
+git add .
+git commit -m "Initial commit"
+Push to GitHub:
+
+less
+Copy
+Edit
+git remote add origin https://github.com/yourname/builder-pattern-demo.git
+git branch -M main
+git push -u origin main
+Enable GitHub Actions for CI (optional): simple build/test workflow.
+
