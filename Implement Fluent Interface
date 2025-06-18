@@ -1,0 +1,31 @@
+public class HouseBuilder implements Builder {
+    private House house;
+
+    public HouseBuilder() {
+        house = new House();
+    }
+
+    public Builder setRooms(int rooms) {
+        house.setRooms(rooms);
+        return this;
+    }
+
+    public Builder setFloors(int floors) {
+        house.setFloors(floors);
+        return this;
+    }
+
+    public Builder setGarden(boolean hasGarden) {
+        house.setGarden(hasGarden);
+        return this;
+    }
+
+    public Builder setSwimmingPool(boolean hasSwimmingPool) {
+        house.setSwimmingPool(hasSwimmingPool);
+        return this;
+    }
+
+    public House build() {
+        return house;
+    }
+}
